@@ -1,0 +1,43 @@
+def add(x, y):
+    return x + y
+def subtruct(x, y):
+    return x - y
+def multiply(x, y):
+    return x * y
+def divide(x, y):
+    if y != 0:
+        return x / y
+    else:
+        return "cannot divide by zero"
+    
+    #getting user input
+    num1 = float(input("Enter the first number:"))
+    num2 = float(input("Enter the second number"))
+    
+    #display menu
+    print("\nSelect operation:")
+    print("1. add")
+    print("subtract")
+    print("multiply")
+    print("divide")
+    
+    #get user choice
+    choice = input("enter choice (1/2/3/4): ")
+    
+    #perform calculation based on user choice
+    if choice ==  '1':
+        result = add(num1, num2)
+        print(f"{num1} + {num2} ={result}")
+    elif choice == '2':
+        result = subtract(num1, num2)
+        print(f"{num1} - {num2} ={result}")
+    elif choice =='3':
+        result = multiply(num1, num2)
+        print(f"{num1} * {num2} ={result}")
+    elif choice =='4':
+        result = divide(num1, num2)
+        print(f"{num1} / {num2} = {result}")
+    else:
+        print("invalid input. please enter a valid choice.")
+        
+        
